@@ -17,8 +17,3 @@ jobs:
         uses: SonarSource/sonarqube-scan-action@v6
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        with:
-          projectBaseDir: frontend
-          # ชี้ไปที่ไฟล์คอนฟิกที่เก็บไว้ใน infrastructure
-          args: >
-            -Dproject.settings=../infrastructure/sonarqube/sonar-project.properties
