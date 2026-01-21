@@ -8,6 +8,6 @@ class UserController {
 
     @GetMapping("/hello")
     fun sayHello(): String {
-        return "Hello from Kotlin Spring Boot 2026! test"
+        return "Hello from Kotlin Spring Boot 2026!"
     }
 }
