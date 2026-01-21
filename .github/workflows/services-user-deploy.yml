@@ -70,11 +70,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Install Koyeb CLI
-        run: |
-          curl -L https://github.com -o koyeb.tar.gz
-          tar -zxf koyeb.tar.gz
-          chmod +x koyeb
-          sudo mv koyeb /usr/local/bin/
+        uses: koyeb/action-setup@v2
+        with:
+          koyeb_token: ${{ secrets.KOYEB_API_TOKEN }}
 
       - name: Deploy to Koyeb
         env:
