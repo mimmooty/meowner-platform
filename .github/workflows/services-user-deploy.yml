@@ -80,8 +80,7 @@ jobs:
         env:
           KOYEB_TOKEN: ${{ secrets.KOYEB_API_TOKEN }}
         run: |
-          # สั่งให้ Koyeb อัปเดต service โดยใช้ Image จาก GHCR
           koyeb service update ${{env.YOUR_APP_NAME}}/${{env.YOUR_SERVICE_NAME}} \
-            --image ghcr.io/${{ github.repository }}:latest \
+            --image ${{ env.REGISTRY }}/${{ github.repository }}:latest \
             --port 8080 \
             --type docker
