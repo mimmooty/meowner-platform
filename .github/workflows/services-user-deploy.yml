@@ -22,6 +22,9 @@ jobs:
         uses: SonarSource/sonarqube-scan-action@v6
         with:
           projectBaseDir: services/user
+          args: >
+            -Dsonar.projectKey=mimmooty_meowner-platform
+            -Dsonar.organization=mimmooty
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
   build-and-push:
