@@ -7,7 +7,7 @@ on:
     branches:
       - main
     paths:
-      - "backend/user**"
+      - "services/user**"
   pull_request:
     types: [opened, synchronize, reopened]
 jobs:
@@ -21,7 +21,7 @@ jobs:
       - name: SonarQube Scan
         uses: SonarSource/sonarqube-scan-action@v6
         with:
-          projectBaseDir: backend/user
+          projectBaseDir: services/user
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
   build-and-push:
