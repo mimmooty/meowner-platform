@@ -4,6 +4,8 @@ env:
   VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
   IMAGE_NAME: ${{ github.repository }}
   REGISTRY: ghcr.io
+  YOUR_APP_NAME: pure-bert
+  YOUR_SERVICE_NAME: user-service
 
 on:
   push:
@@ -77,7 +79,7 @@ jobs:
           KOYEB_TOKEN: ${{ secrets.KOYEB_API_TOKEN }}
         run: |
           # สั่งให้ Koyeb อัปเดต service โดยใช้ Image จาก GHCR
-          koyeb service update <YOUR_APP_NAME>/<YOUR_SERVICE_NAME> \
+          koyeb service update ${{env.YOUR_APP_NAME}}/${{env.YOUR_SERVICE_NAME}} \
             --image ghcr.io/${{ github.repository }}:latest \
             --port 8080 \
             --type docker
