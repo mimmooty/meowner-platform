@@ -1,4 +1,4 @@
-name: CI/CD Pipeline
+name: user-service CI/CD Pipeline
 env:
   VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
   VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
@@ -71,8 +71,10 @@ jobs:
     steps:
       - name: Install Koyeb CLI
         run: |
-          curl https://app.koyeb.com | sh
-          echo "/home/runner/.koyeb/bin" >> $GITHUB_PATH
+          curl -L https://github.com -o koyeb.tar.gz
+          tar -zxf koyeb.tar.gz
+          chmod +x koyeb
+          sudo mv koyeb /usr/local/bin/
 
       - name: Deploy to Koyeb
         env:
