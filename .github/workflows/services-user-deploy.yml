@@ -71,9 +71,7 @@ jobs:
     steps:
       - name: Install Koyeb CLI
         run: |
-          # โหลดสคริปต์ติดตั้งอย่างเป็นทางการ
           curl https://raw.githubusercontent.com | sh
-          # เพิ่ม Path เพื่อให้เรียกใช้คำสั่ง koyeb ได้ใน Step ถัดไป
           echo "$HOME/.koyeb/bin" >> $GITHUB_PATH
 
       - name: Deploy to Koyeb
