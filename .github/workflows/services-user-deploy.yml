@@ -2,7 +2,9 @@ name: CI/CD Pipeline
 env:
   VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
   VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+  IMAGE_NAME: ${{ github.repository }}
   REGISTRY: ghcr.io
+
 on:
   push:
     branches:
