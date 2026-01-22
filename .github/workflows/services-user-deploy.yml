@@ -65,7 +65,7 @@ jobs:
           push: true
           tags: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
 
-  deploy-to-koyeb:
+  deploy-to-railway:
     needs: build-and-push
     runs-on: ubuntu-latest
     steps:
