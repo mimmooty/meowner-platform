@@ -1,4 +1,4 @@
-FROM bitnami/kong:3.8.0
+FROM kong:latest
 
 # คัดลอกคอนฟิกเข้าไปใน Container
 COPY kong.yml /usr/local/kong/declarative/kong.yml
