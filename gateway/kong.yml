@@ -1,0 +1,26 @@
+_format_version: "3.0"
+_transform: true
+
+services:
+  - name: backend-api
+    url: ${BACKEND_INTERNAL_URL} # ใช้ Variable จาก Railway
+    routes:
+      - name: auth-and-api
+        paths:
+          - /api
+          - /login
+          - /oauth2
+          - /hello
+  - name: nextjs-web
+    url: ${FRONTEND_INTERNAL_URL}
+    routes:
+      - name: frontend-home
+        paths:
+          - /
+
+plugins:
+  - name: cors
+    config:
+      origins: ["https://meowner.com"] # โดเมนจริงของคุณ
+      methods: ["GET", "POST", "OPTIONS"]
+      credentials: true
