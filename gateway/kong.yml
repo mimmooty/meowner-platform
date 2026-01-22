@@ -7,16 +7,7 @@ services:
     routes:
       - name: auth-and-api
         paths:
-          - /api
-          - /login
-          - /oauth2
           - /hello
-  - name: nextjs-web
-    url: ${FRONTEND_INTERNAL_URL}
-    routes:
-      - name: frontend-home
-        paths:
-          - /
 
 plugins:
   - name: cors
