@@ -1,4 +1,4 @@
-FROM kong:3-alpine
+FROM docker.io/kong:latest-alpine
 
 # คัดลอกคอนฟิกเข้าไปใน Container
 COPY kong.yml /usr/local/kong/declarative/kong.yml
