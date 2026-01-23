@@ -2,12 +2,14 @@ _format_version: "3.0"
 _transform: true
 
 services:
-  - name: backend-api
-    url: ${BACKEND_INTERNAL_URL} # ใช้ Variable จาก Railway
+  - name: user-service
+    protocol: https
+    host: user-service.railway.internal
+    post: 8080
     routes:
-      - name: auth-and-api
+      - name: user-service
         paths:
-          - /hello
+          - /*
 
 plugins:
   - name: cors
