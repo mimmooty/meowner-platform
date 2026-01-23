@@ -2,6 +2,12 @@ _format_version: "3.0"
 _transform: true
 
 services:
+  - name: kong-status
+    url: http://localhost:8100/status # Kong Status API ภายใน
+    routes:
+      - name: kong-status-route
+        paths:
+          - /status
   - name: user-service
     protocol: http
     host: user-service
