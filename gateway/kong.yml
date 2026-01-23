@@ -9,7 +9,7 @@ services:
     routes:
       - name: user-service
         paths:
-          - /*
+          - /hello
 
 plugins:
   - name: cors
