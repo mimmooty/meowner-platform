@@ -5,7 +5,7 @@ services:
   - name: user-service
     protocol: https
     host: user-service.railway.internal
-    post: 8080
+    port: 8080
     routes:
       - name: user-service
         paths:
