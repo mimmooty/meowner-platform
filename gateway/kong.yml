@@ -12,6 +12,6 @@ services:
 plugins:
   - name: cors
     config:
-      origins: ["https://meowner-web-production.up.railway.app/"] # โดเมนจริงของคุณ
+      origins: ["https://meowner-platform-web.vercel.app/"] # โดเมนจริงของคุณ
       methods: ["GET", "POST", "OPTIONS"]
       credentials: true
