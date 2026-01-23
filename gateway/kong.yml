@@ -3,7 +3,7 @@ _transform: true
 
 services:
   - name: user-service
-    protocol: https
+    protocol: http
     host: user-service.railway.internal
     port: 8080
     routes:
