@@ -6,6 +6,9 @@ services:
     protocol: http
     host: user-service
     port: 8080
+    connect_timeout: 60000 # เพิ่มเป็น 60 วินาที
+    read_timeout: 60000 # เพิ่มเป็น 60 วินาที
+    write_timeout: 60000 # เพิ่มเป็น 60 วินาที
     routes:
       - name: user-service-route
         paths:
