@@ -34,9 +34,15 @@ export default function RootLayout({
             new collection available now
           </p>
         </section>
-        <header className="flex justify-between bg-zinc-100 p-2">
+        <header className="sticky top-0 z-50 flex justify-between bg-zinc-100 p-2">
           {/* Desktop Menu */}
           <ul className="flex-1 hidden md:flex items-end md:ml-5 ml-2 gap-4">
+            <Link
+              href="/"
+              className="font-mono font-bold text-[clamp(1rem,3vw,1.2rem)]"
+            >
+              Home
+            </Link>
             <Link
               href="/products"
               className="font-mono font-bold text-[clamp(1rem,3vw,1.2rem)]"
@@ -70,13 +76,7 @@ export default function RootLayout({
           </button>
           <div className="flex-1 flex flex-col items-center">
             <div>
-              <Image
-                className="size-12"
-                src="/maja.png"
-                alt="maja"
-                width={50}
-                height={10}
-              />
+              <Image src="/3 cat.svg" alt="maja" width={200} height={10} />
             </div>
             <div>
               <p className="hidden md:block font-mono font-bold text-[clamp(1rem,3vw,2rem)]">
