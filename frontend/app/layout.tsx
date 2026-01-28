@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import Link from "next/link";
+import Image from "next/image";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -27,6 +29,67 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <section className="bg-black">
+          <p className="font-mono text-white text-center">
+            new collection available now
+          </p>
+        </section>
+        <header className="flex justify-between bg-zinc-100 p-2">
+          {/* Desktop Menu */}
+          <ul className="flex-1 hidden md:flex items-end md:ml-5 ml-2 gap-4">
+            <Link
+              href="/products"
+              className="font-mono font-bold text-[clamp(1rem,3vw,1.2rem)]"
+            >
+              Product
+            </Link>
+
+            <li className="font-mono font-bold text-[clamp(1rem,3vw,1.2rem)]">
+              Collection
+            </li>
+            <li className="font-mono font-bold text-[clamp(1rem,3vw,1.2rem)]">
+              About
+            </li>
+          </ul>
+
+          {/* Hamburger Menu (โผล่เฉพาะตอนมือถือ) */}
+          <button className="md:hidden flex-1 ml-2">
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
+          <div className="flex-1 flex flex-col items-center">
+            <div>
+              <Image
+                className="size-12"
+                src="/maja.png"
+                alt="maja"
+                width={50}
+                height={10}
+              />
+            </div>
+            <div>
+              <p className="hidden md:block font-mono font-bold text-[clamp(1rem,3vw,2rem)]">
+                the.last.three.cat
+              </p>
+            </div>
+          </div>
+          <ul className="flex-1 flex justify-end items-end md:mr-5 mr-2">
+            <li className="font-mono font-bold text-[clamp(1rem,3vw,1.2rem)]">
+              Signup
+            </li>
+          </ul>
+        </header>
         {children}
       </body>
     </html>

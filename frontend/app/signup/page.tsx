@@ -1,7 +1,6 @@
 "use client";
 
 import { signIn } from "next-auth/react";
-import { Chrome, ArrowRight } from "lucide-react";
 
 export default function SignupPage() {
   return (
