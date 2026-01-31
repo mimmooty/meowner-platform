@@ -22,7 +22,7 @@ export default function Home() {
           "ใส่เสื้อ Cat Club แล้วออกไปใช้ชีวิตซะ!"
         </p>
       </div>
-      <div className="flex flex-wrap justify-center items-center gap-4">
+      <div className="flex flex-wrap justify-center items-center gap-4 mb-5">
         <Image src="/13.jpg" alt="maja" width={600} height={1000} />
         <Image src="/4.jpg" alt="maja" width={600} height={1000} />
         <Image src="/5.jpg" alt="maja" width={600} height={1000} />
