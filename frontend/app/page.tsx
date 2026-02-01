@@ -4,7 +4,7 @@ import Image from "next/image";
 import MajaRunScroll from "@/components/MajaRunScroll";
 export default function Home() {
   return (
-    <div className="bg-white">
+    <div className="bg-white text-black">
       <div className="flex md:flex-row flex-col justify-between items-center bg-[#33423D]">
         <div className="flex-1  justify-center text-center p-20">
           <div>
