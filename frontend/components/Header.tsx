@@ -10,7 +10,7 @@ export default function Header() {
     <>
       <header className="sticky top-0 z-30 flex justify-between bg-zinc-100 p-2">
         {/* Desktop Menu */}
-        <ul className="flex-1 hidden md:flex items-end md:ml-5 ml-2 gap-4">
+        <ul className="flex-1 hidden md:flex items-end md:ml-5 ml-2 gap-4 text-black">
           <Link
             href="/"
             className="font-mono font-bold text-[clamp(1rem,3vw,1.2rem)]"

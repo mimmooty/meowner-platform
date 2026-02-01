@@ -41,7 +41,7 @@ export default function MajaRunScroll() {
   );
 
   return (
-    <div ref={containerRef} className="md:h-[30vh] h-[40vh] relative">
+    <div ref={containerRef} className="md:h-[50vh] h-[40vh] relative">
       {/* รูปแมวของคุณ */}
       <img
         ref={catRef}
