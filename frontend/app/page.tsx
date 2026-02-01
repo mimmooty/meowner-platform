@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import MajaRunScroll from "@/components/MajaRunScroll";
 export default function Home() {
   return (
     <div>
@@ -15,17 +16,43 @@ export default function Home() {
             </p>
           </div>
         </div>
-        <Image src="/2.jpg" alt="maja" width={1200} height={500} />
+        <div className="relative md:w-[70vw] w-full h-[500px]">
+          <Image
+            src="/2.jpg"
+            alt="maja"
+            fill
+            className="object-cover" // เพื่อให้รูปไม่เบี้ยวเมื่อสัดส่วนเปลี่ยน
+          />
+        </div>
       </div>
       <div className="flex justify-center items-end p-20">
         <p className="font-mono font-border text-2xl  italic">
           "ใส่เสื้อ Cat Club แล้วออกไปใช้ชีวิตซะ!"
         </p>
       </div>
-      <div className="flex flex-wrap justify-center items-center gap-4 mb-5">
-        <Image src="/13.jpg" alt="maja" width={600} height={1000} />
-        <Image src="/4.jpg" alt="maja" width={600} height={1000} />
-        <Image src="/5.jpg" alt="maja" width={600} height={1000} />
+      <MajaRunScroll />
+      <div className="flex-1 flex flex-wrap justify-center items-center gap-4 mb-5">
+        <Image
+          src="/13.jpg"
+          alt="maja"
+          width={600}
+          height={1000}
+          className="md:w-[30vw] w-full h-auto"
+        />
+        <Image
+          src="/4.jpg"
+          alt="maja"
+          width={600}
+          height={1000}
+          className="md:w-[30vw] w-full h-auto"
+        />
+        <Image
+          src="/5.jpg"
+          alt="maja"
+          width={600}
+          height={1000}
+          className="md:w-[30vw] w-full h-auto"
+        />
       </div>
     </div>
   );
