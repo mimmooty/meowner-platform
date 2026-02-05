@@ -9,10 +9,10 @@ export default function Home() {
         <div className="flex-1  justify-center text-center p-20">
           <div>
             <p className="font-serif text-white font-border text-5xl ">
-              Collection 2026
+              คอลเลคชั่น
             </p>
             <p className="font-sans text-gray-400 md:text-2xl text-lg italic">
-              "Weekend Vibes with Maja, Tusse, and Leo"
+              "Weekend Cat"
             </p>
           </div>
         </div>

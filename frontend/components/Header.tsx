@@ -13,21 +13,66 @@ export default function Header() {
         <ul className="flex-1 hidden md:flex items-end md:ml-5 ml-2 gap-4">
           <Link
             href="/"
-            className="font-mono font-bold text-[clamp(1rem,3vw,1.2rem)]"
+            className="font-mono font-bold text-[clamp(1rem,3vw,1.2rem)] py-2"
           >
             Home
           </Link>
           <Link
             href="/products"
-            className="font-mono font-bold text-[clamp(1rem,3vw,1.2rem)]"
+            className="font-mono font-bold text-[clamp(1rem,3vw,1.2rem)] py-2"
           >
             Product
           </Link>
 
-          <li className="font-mono font-bold text-[clamp(1rem,3vw,1.2rem)]">
-            Collection
+          <li className="relative group py-2  font-mono font-bold text-[clamp(1rem,3vw,1.2rem)]">
+            <Link
+              href="/collections"
+              className="relative group py-2 font-mono font-bold text-[clamp(1rem,3vw,1.2rem)]"
+            >
+              Collections
+            </Link>
+
+            {/* Sub Menu (Dropdown) */}
+            <ul className="absolute hidden group-hover:block flex flex-col items-center mt-2 w-[40vw] bg-white border border-gray-300 shadow-lg z-10">
+              <div className="text-center mt-10">Collections Cat Club</div>
+              <div className="flex-1 flex flex-wrap justify-center items-end gap-10 m-10">
+                <Image
+                  src="/movie.png"
+                  alt="maja"
+                  width={600}
+                  height={600}
+                  className="w-[10vw] h-auto"
+                />
+
+                <Image
+                  src="/bike.png"
+                  alt="maja"
+                  width={600}
+                  height={1000}
+                  className="w-[10vw] h-auto"
+                />
+
+                <Image
+                  src="/running.png"
+                  alt="maja"
+                  width={600}
+                  height={1000}
+                  className="w-[10vw] h-auto"
+                />
+              </div>
+              <div className="text-center mt-10">Collections 3D Cat</div>
+              <div className="flex-1 flex flex-wrap justify-center items-end gap-10 m-10">
+                <Image
+                  src="/maja.png"
+                  alt="maja"
+                  width={600}
+                  height={600}
+                  className="w-[5vw] h-auto"
+                />
+              </div>
+            </ul>
           </li>
-          <li className="font-mono font-bold text-[clamp(1rem,3vw,1.2rem)]">
+          <li className="font-mono font-bold text-[clamp(1rem,3vw,1.2rem)] py-2">
             About
           </li>
         </ul>
@@ -64,7 +109,7 @@ export default function Header() {
           </div>
         </div>
         <ul className="flex-1 flex justify-end items-end md:mr-5 mr-2">
-          <li className="font-mono font-bold text-[clamp(1rem,3vw,1.2rem)]">
+          <li className="font-mono font-bold text-[clamp(1rem,3vw,1.2rem)] py-2">
             Signup
           </li>
         </ul>
