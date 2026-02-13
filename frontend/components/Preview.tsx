@@ -2,7 +2,7 @@
 import { ComponentProps } from "../types/cat";
 import { useEffect, useRef, useState } from "react";
 
-export default function Preview({ config ,setConfig}: ComponentProps) {
+export default function Preview({ config }: ComponentProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [images, setImages] = useState<{ [key: string]: HTMLImageElement }>({});
  

@@ -8,8 +8,7 @@ export default function CatBuilder() {
   const [config, setConfig] = useState({
     head: "head1",
     eyes: "eyes1",
-    mouth: "mouth1",
-    color: "#FFDAB9", // สีผิวเริ่มต้น
+    mouth: "mouth1"
   });
 
   return (
