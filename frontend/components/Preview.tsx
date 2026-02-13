@@ -37,12 +37,16 @@ export default function Preview({ config }: ComponentProps) {
 
   // 2. Global Mouse Logic (Fixed "null" issue)
   useEffect(() => {
-    const handleGlobalMove = (e: MouseEvent) => {
+    const handleGlobalMove = (e: MouseEvent|TouchEvent) => {
       if (!draggingRef.current || !canvasRef.current) return;
 
+      const clientX = 'touches' in e ? e.touches[0].clientX : e.clientX;
+      const clientY = 'touches' in e ? e.touches[0].clientY : e.clientY;
+  
       const rect = canvasRef.current.getBoundingClientRect();
-      const newX = e.clientX - rect.left - 160; 
-      const newY = e.clientY - rect.top - 160;
+      const newX = clientX - rect.left - 160; 
+      const newY = clientY - rect.top - 160;
+  
 
       if (draggingRef.current === "eyes") setEyePos({ x: newX, y: newY });
       if (draggingRef.current === "mouth") setMouthPos({ x: newX, y: newY });
@@ -75,6 +79,7 @@ export default function Preview({ config }: ComponentProps) {
     <div className="flex flex-col items-center gap-4">
       <canvas 
         ref={canvasRef} 
+        style={{ touchAction: 'none' }} // Prevents mobile scrolling
         width={320} 
         height={320} 
         className="border rounded-lg shadow-md bg-white"
