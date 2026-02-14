@@ -31,40 +31,6 @@ export default function Header() {
             >
               Collections
             </Link>
-
-            {/* Sub Menu (Dropdown) */}
-            <ul className="absolute hidden group-hover:block flex flex-wrap mt-2 w-[40vw] bg-white border border-gray-300 shadow-lg z-10">
-              <div className="flex-1 mt-10">Collections Cat Club</div>
-
-                <Image
-                  src="/collection/col1.svg"
-                  alt="maja"
-                  width={600}
-                  height={1000}
-                  className="flex-1 w-[10vw] h-auto"
-                />
-            
-       
-              <div className="mt-10">Collections 3D Cat</div>
-              
-                <Image
-                  src="/collection/col2.png"
-                  alt="maja"
-                  width={600}
-                  height={600}
-                  className="w-[5vw] h-auto"
-                />
-       
-              <div className="text-center mt-10">Collections create your own cat</div>
-                <Image
-                  src="/maja.png"
-                  alt="maja"
-                  width={600}
-                  height={600}
-                  className="w-[5vw] h-auto"
-                />
-          
-            </ul>
           </li>
           <li className="font-mono font-bold text-[clamp(1rem,3vw,1.2rem)] py-2">
             About

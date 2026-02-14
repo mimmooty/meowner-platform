@@ -1,17 +1,37 @@
+import Link from "next/link";
+import Image from "next/image";
 export default function ProductPage() {
   const products = [
-    { id: 1, name: "เสื้อยืดลด 50%", price: 290 },
-    { id: 2, name: "กางเกงยีนส์", price: 990 },
+    {
+      id: 1,
+      name: "cat running club t-shirt",
+      price: 390,
+      image: "/assets/products/p1.jpg",
+    },
+    {
+      id: 2,
+      name: "cat cycling club t-shirt",
+      price: 390,
+      image: "/assets/products/p2.png",
+    },
+    {
+      id: 3,
+      name: "cat running club t-shirt",
+      price: 390,
+      image: "/running.png",
+    },
   ];
 
   return (
-    <div>
-      <h1 className="text-2xl font-bold mb-6">รายการสินค้า</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+    <div className="bg-white">
+      <div className="flex flex-wrap justify-center gap-10 p-4">
         {products.map((item) => (
-          <div key={item.id} className="border p-4 rounded-lg shadow-sm">
-            <h2 className="font-semibold">{item.name}</h2>
-            <p className="text-red-500">{item.price} บาท</p>
+          <div key={item.id} className="p-4 bg-white hover:shadow-sm w-70">
+            <Link href="/">
+              <Image src={item.image} alt="maja" width={500} height={10} />
+            </Link>
+            <h2 className="font-semibold p-2">{item.name}</h2>
+            <p className="text-end text-black-500">{item.price} THB</p>
           </div>
         ))}
       </div>
