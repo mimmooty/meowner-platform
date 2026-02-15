@@ -16,6 +16,7 @@ class ProductController(private val productService: ProductService) {
     }
 
     @GetMapping("/get-product/{type}")
+    @CrossOrigin(origins = arrayOf("*"))
     fun getProduct(@PathVariable type: String) = productService.getProductsByType(type)
 
 }
