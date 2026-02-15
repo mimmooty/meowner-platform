@@ -3,15 +3,15 @@ env:
   RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
   IMAGE_NAME: ${{ github.repository }}
   REGISTRY: ghcr.io
-  YOUR_SERVICE_NAME: user-service
-  YOUR_CONTEXT: ./services/user
+  YOUR_SERVICE_NAME: product-service
+  YOUR_CONTEXT: ./services/product
 
 on:
   push:
     branches:
       - main
     paths:
-      - "services/user**"
+      - "services/product**"
   pull_request:
     types: [opened, synchronize, reopened]
 jobs:

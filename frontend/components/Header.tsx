@@ -37,7 +37,7 @@ export default function Header() {
                   ALL
                 </Link>
                 <Link
-                  href="/products"
+                  href="/products/tshirt"
                   className="block px-4 py-2 hover:bg-gray-200"
                   onClick={() => setIsProductOpen(false)}
                 >

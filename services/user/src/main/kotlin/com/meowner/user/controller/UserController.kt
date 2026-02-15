@@ -1,5 +1,6 @@
 package com.meowner.user.controller
 
+import org.springframework.web.bind.annotation.CrossOrigin
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RestController
 
@@ -7,7 +8,8 @@ import org.springframework.web.bind.annotation.RestController
 class UserController {
 
     @GetMapping("/hello")
-    fun sayHello(): String {
-        return "Hello from Kotlin Spring Boot 2026!!"
+    @CrossOrigin(origins = arrayOf("http://localhost:3000"))
+    fun sayHello(): Map<String, String> {
+        return mapOf("data" to "mim")
     }
 }

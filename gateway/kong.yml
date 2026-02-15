@@ -11,7 +11,15 @@ services:
         paths:
           - /hello
         strip_path: false
-
+  - name: product-service
+    protocol: http
+    host: product-service
+    port: 8080
+    routes:
+      - name: product-service-route
+        paths:
+          - /get-product
+        strip_path: false
 plugins:
   - name: cors
     config:
