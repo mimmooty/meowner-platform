@@ -5,6 +5,7 @@ env:
   REGISTRY: ghcr.io
   YOUR_SERVICE_NAME: product-service
   YOUR_CONTEXT: ./services/product
+  DIR: services/product
 
 on:
   push:
@@ -25,7 +26,7 @@ jobs:
       - name: SonarQube Scan
         uses: SonarSource/sonarqube-scan-action@v6
         with:
-          projectBaseDir: services/user
+          projectBaseDir: ${{ env.DIR }}
           args: >
             -Dsonar.projectKey=mimmooty_meowner-platform
             -Dsonar.organization=mimmooty
