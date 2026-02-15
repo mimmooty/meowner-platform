@@ -8,11 +8,11 @@ export default function CatBuilder() {
   const [config, setConfig] = useState({
     head: "head1",
     eyes: "eyes1",
-    mouth: "mouth1"
+    mouth: "mouth1",
   });
 
   return (
-    <main className="min-h-screen bg-gray-50 p-8">
+    <main className="min-h-screen bg-gray-50 p-8 font-mono">
       <div className="max-w-5xl mx-auto bg-white rounded-xl shadow-lg p-6">
         <p className="text-center text-black font-sans mb-8">
           Create your own cat for printing
