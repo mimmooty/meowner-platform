@@ -1,4 +1,4 @@
-name: user-service CI/CD Pipeline
+name: product-service CI/CD Pipeline
 env:
   RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
   IMAGE_NAME: ${{ github.repository }}
