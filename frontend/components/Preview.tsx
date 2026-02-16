@@ -32,7 +32,10 @@ export default function Preview({ config }: ComponentProps) {
       loadImg(`/assets/cat/head/${config.head}.svg`),
       loadImg(`/assets/cat/eyes/${config.eyes}.svg`),
       loadImg(`/assets/cat/mouth/${config.mouth}.svg`),
-    ]).then(([h, e, m]) => setImages({ head: h, eyes: e, mouth: m }));
+      loadImg(`/assets/cat/whiskers/${config.whiskers}.svg`),
+    ]).then(([h, e, m, w]) =>
+      setImages({ head: h, eyes: e, mouth: m, whiskers: w }),
+    );
   }, [config]);
 
   // 3. Draw loop
@@ -41,9 +44,10 @@ export default function Preview({ config }: ComponentProps) {
     if (!ctx || !images.head) return;
 
     ctx.clearRect(0, 0, 320, 320);
-    ctx.drawImage(images.head, 22, 20, 260, 300);
-    if (images.eyes) ctx.drawImage(images.eyes, 22, 20, 260, 300);
-    if (images.mouth) ctx.drawImage(images.mouth, 22, 20, 260, 300);
+    ctx.drawImage(images.head, 30, 30, 260, 300);
+    if (images.eyes) ctx.drawImage(images.eyes, 42, 10, 260, 300);
+    if (images.mouth) ctx.drawImage(images.mouth, 42, 10, 260, 300);
+    if (images.whiskers) ctx.drawImage(images.whiskers, 45, 28, 260, 300);
   }, [images, eyePos, mouthPos]);
 
   return (

@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { ComponentProps } from "../types/cat";
 const parts = {
-  head: ["head1", "head2", "head3"],
-  eyes: ["eyes1", "eyes2", "eyes3"],
-  mouth: ["mouth1", "mouth2", "mouth3"],
+  head: ["black1", "gray1", "orange1", "white1", "vicianmas1"],
+  eyes: ["e1", "e2", "e3", "e4"],
+  mouth: ["m1", "m2", "m3"],
+  whiskers: ["w1", "w2", "w3", "none"],
 };
 
 export default function Controls({ config, setConfig }: ComponentProps) {
