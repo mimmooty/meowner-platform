@@ -237,11 +237,11 @@ export default function Header() {
             Cat Club
           </Link>
           <Link
-            href="/products/catcustomizer"
+            href="/products/catCustomizer"
             onClick={() => setIsFull(false)}
             className="font-mono text-xl pl-10"
           >
-            Cat Customizer
+            Cat friend
           </Link>
           <Link
             href="/products/catmoon"
