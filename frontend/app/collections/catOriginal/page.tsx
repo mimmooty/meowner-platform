@@ -1,7 +1,7 @@
 "use client";
 import ProductCard from "@/components/ProductCard";
 import { useEffect, useState } from "react";
-export default function TshirtPage() {
+export default function CatOriginal() {
   interface product {
     name: string;
     description: string;
@@ -15,7 +15,7 @@ export default function TshirtPage() {
       const baseUrl = process.env.NEXT_PUBLIC_API_URL;
       try {
         const response = await fetch(
-          `${baseUrl}/get-product-by-type/TSHIRT`,
+          `${baseUrl}/get-product-by-collection/Cat Original Collection`,
         );
         const data = await response.json();
         setData(data);
@@ -27,8 +27,8 @@ export default function TshirtPage() {
   }, []);
   return (
     <div className="bg-white">
-      <p className="font-mono font-border text-center text-2xl p-6">Product T-Shirt</p>
-      <div className="flex flex-wrap justify-center gap-10 p-4">
+        <p className="font-mono font-border text-center text-2xl p-6">PRODUCTS</p>
+        <div className="flex flex-wrap justify-center gap-10 p-4">
         {Data.map((item) => (
             <ProductCard key={item.name} product={item} />
         ))}

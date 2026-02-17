@@ -9,14 +9,15 @@ import org.springframework.web.bind.annotation.RestController
 @RestController
 class ProductController(private val productService: ProductService) {
 
-    @GetMapping("/get-products")
-    @CrossOrigin(origins = arrayOf("http://localhost:3000"))
-    fun getProduct(): Map<String, String> {
-        return mapOf("data" to "mim")
-    }
-
-    @GetMapping("/get-product/{type}")
+    @GetMapping("/get-product")
     @CrossOrigin(origins = arrayOf("*"))
-    fun getProduct(@PathVariable type: String) = productService.getProductsByType(type)
+    fun getProductByType() = productService.getProducts()
 
+    @GetMapping("/get-product-by-type/{type}")
+    @CrossOrigin(origins = arrayOf("*"))
+    fun getProductByType(@PathVariable type: String) = productService.getProductsByType(type)
+
+    @GetMapping("/get-product-by-collection/{collection}")
+    @CrossOrigin(origins = arrayOf("*"))
+    fun getProductByCollection(@PathVariable  collection: String) = productService.getProductsByCollection(collection)
 }

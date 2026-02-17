@@ -30,7 +30,7 @@ export default function Header() {
             {isProductOpen && (
               <div className="absolute left-0 w-60 bg-white/80 text-black shadow-lg rounded-md">
                 <Link
-                  href="/products"
+                  href="/products/All"
                   className="block px-4 py-2 hover:bg-gray-200"
                   onClick={() => setIsProductOpen(false)}
                 >
@@ -44,18 +44,11 @@ export default function Header() {
                   T-Shirt
                 </Link>
                 <Link
-                  href="/products"
+                  href="/products/accessories"
                   className="block px-4 py-2 hover:bg-gray-200"
                   onClick={() => setIsProductOpen(false)}
                 >
                   Accessories
-                </Link>
-                <Link
-                  href="/products"
-                  className="block px-4 py-2 hover:bg-gray-200"
-                  onClick={() => setIsProductOpen(false)}
-                >
-                  Line Sticker
                 </Link>
               </div>
             )}
@@ -74,39 +67,32 @@ export default function Header() {
             {isOpen && (
               <div className="absolute left-0 w-60 bg-white/80 text-black shadow-lg rounded-md">
                 <Link
-                  href="/collections"
+                  href="/collections/All"
                   className="block px-4 py-2 hover:bg-gray-200"
                   onClick={() => setIsOpen(false)}
                 >
                   ALL
                 </Link>
                 <Link
-                  href="/collections/original"
+                  href="/collections/catOriginal"
                   className="block px-4 py-2 hover:bg-gray-200"
                   onClick={() => setIsOpen(false)}
                 >
                   Cat Original
                 </Link>
                 <Link
-                  href="/collections/catclub"
+                  href="/collections/catClub"
                   className="block px-4 py-2 hover:bg-gray-200"
                   onClick={() => setIsOpen(false)}
                 >
                   Cat Club
                 </Link>
                 <Link
-                  href="/collections/catCustomizer"
+                  href="/collections/catFriend"
                   className="block px-4 py-2 hover:bg-gray-200"
                   onClick={() => setIsOpen(false)}
                 >
                   Cat friend
-                </Link>
-                <Link
-                  href="/collections/catmoon"
-                  className="block px-4 py-2 hover:bg-gray-200"
-                  onClick={() => setIsOpen(false)}
-                >
-                  Cat Moon
                 </Link>
               </div>
             )}
@@ -172,7 +158,7 @@ export default function Header() {
             Home
           </Link>
           <Link
-            href="/products"
+            href="/products/All"
             onClick={() => setIsFull(false)}
             className="font-mono font-bold text-2xl"
           >
@@ -180,7 +166,7 @@ export default function Header() {
           </Link>
           {/* sub menu mobile*/}
           <Link
-            href="/products"
+            href="/products/All"
             onClick={() => setIsFull(false)}
             className="font-mono text-xl pl-10"
           >
@@ -201,13 +187,6 @@ export default function Header() {
             Accessories
           </Link>
           <Link
-            href="/products/linesticker"
-            onClick={() => setIsFull(false)}
-            className="font-mono text-xl pl-10"
-          >
-            Line Sticker
-          </Link>
-          <Link
             href="/collections"
             onClick={() => setIsFull(false)}
             className="font-mono font-bold text-2xl"
@@ -216,39 +195,32 @@ export default function Header() {
           </Link>
           {/* sub menu mobile*/}
           <Link
-            href="/collections"
+            href="/collections/All"
             onClick={() => setIsFull(false)}
             className="font-mono text-xl pl-10"
           >
             ALL
           </Link>
           <Link
-            href="/collections/catoriginal"
+            href="/collections/catOriginal"
             onClick={() => setIsFull(false)}
             className="font-mono text-xl pl-10"
           >
             Cat Original
           </Link>
           <Link
-            href="/collections/catclub"
+            href="/collections/catClub"
             onClick={() => setIsFull(false)}
             className="font-mono text-xl pl-10"
           >
             Cat Club
           </Link>
           <Link
-            href="/collections/catCustomizer"
+            href="/collections/catFriend"
             onClick={() => setIsFull(false)}
             className="font-mono text-xl pl-10"
           >
             Cat friend
-          </Link>
-          <Link
-            href="/products/catmoon"
-            onClick={() => setIsFull(false)}
-            className="font-mono text-xl pl-10"
-          >
-            Cat Moon
           </Link>
           <Link
             href="/about"

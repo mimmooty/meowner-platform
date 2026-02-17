@@ -11,7 +11,7 @@ export default function Controls({ config, setConfig }: ComponentProps) {
   const [activeTab, setActiveTab] = useState<keyof typeof parts>("head");
   type PartCategory = keyof typeof parts;
   return (
-    <div className="flex flex-col md:border-l pl-8">
+    <div className="flex flex-col md:border-l md:pl-8">
       {/* Tabs Menu */}
       <div className="flex gap-4 border-b mb-4 text-sm font-medium text-gray-500">
         {(Object.keys(parts) as PartCategory[]).map((tab) => (

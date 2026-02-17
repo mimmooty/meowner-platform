@@ -1,24 +1,13 @@
 "use client";
 
 import Image from "next/image";
-import MajaRunScroll from "@/components/MajaRunScroll";
 export default function Home() {
   return (
     <div className="bg-white text-black">
       <div className="flex md:flex-row flex-col justify-between items-center bg-[#33423D]">
-        <div className="flex-1  justify-center text-center p-20">
-          <div>
-            <p className="font-serif text-white font-border text-5xl ">
-              คอลเลคชั่น
-            </p>
-            <p className="font-sans text-gray-400 md:text-2xl text-lg italic">
-              "Weekend Cat"
-            </p>
-          </div>
-        </div>
-        <div className="relative md:w-[60vw] w-full md:h-[30vw] h-[60vw]">
+        <div className="relative w-full md:h-[30vw] h-[60vw]">
           <Image
-            src="/2.jpg"
+            src="/assets/mock/mock-b1.svg"
             alt="maja"
             fill
             className="object-cover" // เพื่อให้รูปไม่เบี้ยวเมื่อสัดส่วนเปลี่ยน
@@ -30,7 +19,7 @@ export default function Home() {
           "ใส่เสื้อ Cat Club แล้วออกไปใช้ชีวิตซะ!"
         </p>
       </div>
-      <MajaRunScroll />
+
       <div className="flex-1 flex flex-wrap justify-center items-center gap-4 mb-5">
         <Image
           src="/13.jpg"
