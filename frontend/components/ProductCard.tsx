@@ -7,7 +7,7 @@ interface Product {
   price: number;
   imagePath: string;
   collection: string;
-  slug: "test";
+  slug: string;
 }
 
 export default function ProductCard({ product }: { product: Product }) {
