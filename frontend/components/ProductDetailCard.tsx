@@ -18,10 +18,10 @@ const ProductDetailCard = () => {
       name: "Midnight Black",
       image: "/assets/mock/mock-p1.svg",
       bgClass: "bg-black",
-    },
+    }as const,
   };
-
-  const [selectedColor, setSelectedColor] = useState("blue");
+  type Color = keyof typeof variants;
+  const [selectedColor, setSelectedColor] = useState<Color>("blue");
   const currentProduct = variants[selectedColor];
 
   return (
@@ -49,7 +49,7 @@ const ProductDetailCard = () => {
         {/* 3. ส่วนตัวเลือกสี (Color Picker) */}
         <div>
           <div className="flex gap-3 p-2">
-            {Object.keys(variants).map((color) => (
+          {(Object.keys(variants) as (keyof typeof variants)[]).map((color) => (
               <button
                 key={color}
                 onClick={() => setSelectedColor(color)}

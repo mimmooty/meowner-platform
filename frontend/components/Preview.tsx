@@ -1,7 +1,7 @@
 "use client";
-import { ComponentProps } from "../types/cat";
+import { PreviewProps } from "../types/cat";
 import { useEffect, useRef, useState } from "react";
-export default function Preview({ config, speechText, fontColor, textY }: ComponentProps) {
+export default function Preview({ config, speechText, fontColor, textY }: PreviewProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [images, setImages] = useState<{ [key: string]: HTMLImageElement }>({});
 
@@ -37,6 +37,7 @@ export default function Preview({ config, speechText, fontColor, textY }: Compon
     })
   
     lines.push(line)
+    if (!canvasRef.current) return
     const canvasWidth = canvasRef.current.width
     const canvasHeight = canvasRef.current.height
     // text

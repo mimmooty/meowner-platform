@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ComponentProps } from "../types/cat";
+import { ControlsProps } from "../types/cat";
 const parts = {
   head: ["black1", "gray1", "orange1", "white1", "vicianmas1"],
   eyes: ["e1", "e2", "e3", "e4"],
@@ -7,7 +7,7 @@ const parts = {
   whiskers: ["w1", "w2", "w3", "none"],
 };
 
-export default function Controls({ config, setConfig }: ComponentProps) {
+export default function Controls({ config, setConfig }: ControlsProps) {
   const [activeTab, setActiveTab] = useState<keyof typeof parts>("head");
   type PartCategory = keyof typeof parts;
   return (
