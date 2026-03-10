@@ -9,6 +9,7 @@ export default function Catclub() {
     price: number; // Use number for display
     imagePath: string; // Matches your Kotlin ProductResponse
     collection: string;
+    slug: string;
   }
   const [Data, setData] = useState<product[]>([]);
   useEffect(() => {
