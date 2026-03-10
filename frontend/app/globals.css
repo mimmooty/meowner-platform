@@ -12,6 +12,18 @@
   --font-mono: var(--font-geist-mono);
 }
 
+@font-face {
+  font-family: "SuperKids";
+  src: url("/fonts/SuperKids.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GameBubble";
+  src: url("/fonts/Game Bubble.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;

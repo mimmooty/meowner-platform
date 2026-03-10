@@ -14,9 +14,7 @@ export default function TshirtPage() {
     const fetchData = async () => {
       const baseUrl = process.env.NEXT_PUBLIC_API_URL;
       try {
-        const response = await fetch(
-          `${baseUrl}/get-product-by-type/TSHIRT`,
-        );
+        const response = await fetch(`${baseUrl}/get-product-by-type/TSHIRT`);
         const data = await response.json();
         setData(data);
       } catch (error) {
@@ -26,13 +24,15 @@ export default function TshirtPage() {
     fetchData();
   }, []);
   return (
-    <div className="bg-white">
-      <p className="font-mono font-border text-center text-2xl p-6">Product T-Shirt</p>
+    <div className="bg-white text-black">
+      <p className="font-mono font-border text-center text-2xl p-6">
+        Product T-Shirt
+      </p>
       <div className="flex flex-wrap justify-center gap-10 p-4">
         {Data.map((item) => (
-            <ProductCard key={item.name} product={item} />
+          <ProductCard key={item.name} product={item} />
         ))}
-        </div>
+      </div>
     </div>
   );
 }

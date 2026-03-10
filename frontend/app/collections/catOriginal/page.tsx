@@ -26,13 +26,13 @@ export default function CatOriginal() {
     fetchData();
   }, []);
   return (
-    <div className="bg-white">
-        <p className="font-mono font-border text-center text-2xl p-6">PRODUCTS</p>
-        <div className="flex flex-wrap justify-center gap-10 p-4">
+    <div className="bg-white text-black">
+      <p className="font-mono font-border text-center text-2xl p-6">PRODUCTS</p>
+      <div className="flex flex-wrap justify-center gap-10 p-4">
         {Data.map((item) => (
-            <ProductCard key={item.name} product={item} />
+          <ProductCard key={item.name} product={item} />
         ))}
-        </div>
+      </div>
     </div>
   );
 }

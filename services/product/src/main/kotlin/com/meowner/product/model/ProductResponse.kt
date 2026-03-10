@@ -7,5 +7,6 @@ data class ProductResponse(
     val description: String, // Becomes "description" in JSON
     val price: BigDecimal,
     val imagePath: String,
-    val collection: String
+    val collection: String,
+    val slug: String,
 )

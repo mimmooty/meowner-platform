@@ -15,6 +15,7 @@ class ProductEntity(
     val name: String,
     val description: String,
     val type: String,
+    val slug: String,
     val collection: String,
     val price: BigDecimal,
     @Column(name = "image_path")

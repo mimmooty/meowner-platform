@@ -14,9 +14,7 @@ export default function AllPage() {
     const fetchData = async () => {
       try {
         const baseUrl = process.env.NEXT_PUBLIC_API_URL;
-        const response = await fetch(
-          `${baseUrl}/get-product`,
-        );
+        const response = await fetch(`${baseUrl}/get-product`);
         const data = await response.json();
         setData(data);
       } catch (error) {
@@ -26,13 +24,15 @@ export default function AllPage() {
     fetchData();
   }, []);
   return (
-    <div className="bg-white">
-        <p className="font-mono font-border text-center text-2xl p-6">All Collection</p>
-        <div className="flex flex-wrap justify-center gap-10 p-4">
+    <div className="bg-white text-black">
+      <p className="font-mono font-border text-center text-2xl p-6">
+        All Collection
+      </p>
+      <div className="flex flex-wrap justify-center gap-10 p-4">
         {Data.map((item) => (
-            <ProductCard key={item.name} product={item} />
+          <ProductCard key={item.name} product={item} />
         ))}
-        </div>
+      </div>
     </div>
   );
 }
